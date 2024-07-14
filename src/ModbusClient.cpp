@@ -163,13 +163,13 @@ long ModbusClient::inputRegisterRead(int id, int address)
   return value;
 }
 
-long ModbusClient::slaveIdRead(int id)
+long ModbusClient::slaveIdRead(uint8_t id)
 {
-  uint16_t value;
+  uint8_t value;
    
   modbus_set_slave(_mb, id);
 
-  if (modbus_report_slave_id(_mb, 1, &value); < 0) {
+  if (modbus_report_slave_id(_mb, 1, &value) < 0) {
     return -1;
   }
 

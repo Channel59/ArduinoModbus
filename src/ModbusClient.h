@@ -82,14 +82,14 @@ public:
   long inputRegisterRead(int address);
   long inputRegisterRead(int id, int address);
 
-    /**
+  /**
    * Perform a "Read Slave ID" operation for a single slave id.
    *
    * @param id (slave) id of target, defaults to 0x00 if not specified
    *
    * @return slave id on success, -1 on failure.
    */
-  long slaveIdRead(int id);
+  long slaveIdRead(uint8_t id);
 
   /**
    * Perform a "Write Single Coil" operation for the specified address and
